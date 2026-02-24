@@ -7,11 +7,7 @@ import "./globals.css"
 import { Suspense } from "react"
 
 export const metadata: Metadata = {
-  title: "dad",
-  generator: "v0.app",
-  icons: {
-    icon: "/favicon.ico",
-  },
+  title: "cognocracy",
 }
 
 export default function RootLayout({
