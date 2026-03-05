@@ -5,7 +5,7 @@ export default function HomePage() {
   return (
     <main className="min-h-dvh bg-background flex items-center justify-center p-4">
       <div className="flex flex-col items-center gap-1.5 sm:gap-3 text-foreground">
-        <h1 className="text-sm sm:text-lg font-medium">albert martínez</h1>
+        <h1 className="text-lg sm:text-2xl font-bold">albert martínez</h1>
         <p className="sr-only">building argue.fun, botcha.xyz. youngest artist at venice biennale 2025.</p>
         <LocalTime />
         <div className="mt-4 sm:mt-6 flex flex-col gap-1 sm:gap-2">
