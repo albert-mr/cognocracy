@@ -3,11 +3,16 @@ import { LocalTime } from "@/components/local-time"
 
 export default function HomePage() {
   return (
-    <div className="min-h-screen bg-background flex items-center justify-center p-4">
-      <div className="flex flex-col items-center gap-2 sm:gap-3 text-foreground">
-        <span className="text-base sm:text-lg font-medium">albert martínez</span>
+    <main className="min-h-dvh bg-background flex items-center justify-center p-4">
+      <div className="flex flex-col items-center gap-1.5 sm:gap-3 text-foreground">
+        <h1 className="text-sm sm:text-lg font-medium">albert martínez</h1>
         <LocalTime />
-        <div className="mt-8 flex flex-col items-center gap-2 sm:gap-3">
+        <div className="mt-4 sm:mt-6 flex flex-col gap-1 sm:gap-2">
+          <span className="text-sm sm:text-lg"><span className="opacity-40 mr-1.5 sm:mr-2">&gt;</span>building the last source of truth at <Link href="https://argue.fun" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-opacity">argue.fun</Link></span>
+          <span className="text-sm sm:text-lg"><span className="opacity-40 mr-1.5 sm:mr-2">&gt;</span>proving you aren't a human at <Link href="https://botcha.xyz" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-opacity">botcha.xyz</Link></span>
+          <span className="text-sm sm:text-lg"><span className="opacity-40 mr-1.5 sm:mr-2">&gt;</span>youngest artist at <Link href="https://www.labiennale.org/en/architecture/2025/living-lab/tide" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-opacity">venice biennale 2025</Link></span>
+        </div>
+        <div className="mt-5 sm:mt-8 flex flex-col items-center gap-1.5 sm:gap-3">
         <Link
           href="https://t.me/cognocracy"
           target="_blank"
@@ -32,6 +37,6 @@ export default function HomePage() {
         </Link>
         </div>
       </div>
-    </div>
+    </main>
   )
 }
