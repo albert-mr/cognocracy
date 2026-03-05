@@ -70,6 +70,7 @@ export default function RootLayout({
                 sameAs: [
                   "https://x.com/cognocracy",
                   "https://t.me/cognocracy",
+                  "https://github.com/albert-mr",
                 ],
                 jobTitle: "Founder",
                 knowsAbout: [
