@@ -6,6 +6,7 @@ export default function HomePage() {
     <main className="min-h-dvh bg-background flex items-center justify-center p-4">
       <div className="flex flex-col items-center gap-1.5 sm:gap-3 text-foreground">
         <h1 className="text-sm sm:text-lg font-medium">albert martínez</h1>
+        <p className="sr-only">building argue.fun, botcha.xyz. youngest artist at venice biennale 2025.</p>
         <LocalTime />
         <div className="mt-4 sm:mt-6 flex flex-col gap-1 sm:gap-2">
           <span className="text-sm sm:text-lg"><span className="opacity-40 mr-1.5 sm:mr-2">&gt;</span>building the last source of truth at <Link href="https://argue.fun" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-opacity">argue.fun</Link></span>
