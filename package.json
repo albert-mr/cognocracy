@@ -11,7 +11,7 @@
   "dependencies": {
     "@vercel/analytics": "latest",
     "geist": "latest",
-    "next": "14.2.16",
+    "next": "14.2.35",
     "react": "^18",
     "react-dom": "^18"
   },
