@@ -9,6 +9,7 @@ export default function HomePage() {
         <p className="sr-only">building argue.fun, botcha.xyz. youngest artist at venice biennale 2025.</p>
         <LocalTime />
         <div className="mt-4 sm:mt-6 flex flex-col gap-1 sm:gap-2">
+          <span className="text-sm sm:text-lg"><span className="opacity-40 mr-1.5 sm:mr-2">&gt;</span>founding engineer at <Link href="https://genlayer.foundation" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-opacity">genlayer.foundation</Link></span>
           <span className="text-sm sm:text-lg"><span className="opacity-40 mr-1.5 sm:mr-2">&gt;</span>building the last source of truth at <Link href="https://argue.fun" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-opacity">argue.fun</Link></span>
           <span className="text-sm sm:text-lg"><span className="opacity-40 mr-1.5 sm:mr-2">&gt;</span>proving you aren't a human at <Link href="https://botcha.xyz" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-opacity">botcha.xyz</Link></span>
           <span className="text-sm sm:text-lg"><span className="opacity-40 mr-1.5 sm:mr-2">&gt;</span>youngest artist at <Link href="https://www.labiennale.org/en/architecture/2025/living-lab/tide" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-opacity">venice biennale 2025</Link></span>
