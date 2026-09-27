@@ -18,7 +18,7 @@ const projects: Project[] = [
   { group: "made", hook: "proving you aren't a human", name: "botcha.xyz", url: "https://botcha.xyz" },
   { group: "made", hook: "building the last source of truth", name: "argue.fun", url: "https://argue.fun" },
   { group: "made", hook: "speaking every model's dialect", name: "promptify", url: "https://github.com/albert-mr/promptify" },
-  { group: "made", hook: "turning the mac's mic key into a real mute switch", name: "mickey", url: "https://github.com/albert-mr/mickey" },
+  { group: "made", hook: "a real mute switch for the mic key", name: "mickey", url: "https://github.com/albert-mr/mickey" },
   { group: "made", hook: "turning any x article into markdown", name: "marticle", url: "https://github.com/albert-mr/marticle" },
   { group: "made", hook: "shadcn/ui, but for logos", name: "shadcn-logos", url: "https://github.com/albert-mr/shadcn-logos" },
   { group: "made", hook: "writing intelligent contracts", join: "with", name: "genlayer mcp", url: "https://github.com/albert-mr/genlayer-mcp-server" },
