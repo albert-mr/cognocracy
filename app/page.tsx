@@ -14,6 +14,7 @@ export default function HomePage() {
           <span className="text-sm sm:text-lg"><span className="opacity-40 mr-1.5 sm:mr-2">&gt;</span>speaking every model's dialect at <Link href="https://github.com/albert-mr/promptify" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-opacity">promptify</Link></span>
           <span className="text-sm sm:text-lg"><span className="opacity-40 mr-1.5 sm:mr-2">&gt;</span>proving you aren't a human at <Link href="https://botcha.xyz" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-opacity">botcha.xyz</Link></span>
           <span className="text-sm sm:text-lg"><span className="opacity-40 mr-1.5 sm:mr-2">&gt;</span>youngest artist at <Link href="https://www.labiennale.org/en/architecture/2025/living-lab/tide" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-opacity">venice biennale 2025</Link></span>
+          <span className="text-sm sm:text-lg"><span className="opacity-40 mr-1.5 sm:mr-2">&gt;</span>more at <Link href="/projects" className="hover:opacity-80 transition-opacity">/projects</Link></span>
         </div>
         <div className="mt-5 sm:mt-8 flex flex-col items-center gap-1.5 sm:gap-3">
         <Link
