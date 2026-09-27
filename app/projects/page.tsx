@@ -23,7 +23,7 @@ const projects: Project[] = [
   { group: "made", hook: "shadcn/ui, but for logos", name: "shadcn-logos", url: "https://github.com/albert-mr/shadcn-logos" },
   { group: "made", hook: "writing intelligent contracts", join: "with", name: "genlayer mcp", url: "https://github.com/albert-mr/genlayer-mcp-server" },
   { group: "with genlayer", hook: "wiring agents into swarms, the erlang way", name: "genswarms", url: "https://github.com/genlayerlabs/genswarms", repo: "genlayerlabs/genswarms" },
-  { group: "with genlayer", hook: "every genlayer app starts", name: "genlayer-project-boilerplate", url: "https://github.com/genlayerlabs/genlayer-project-boilerplate", repo: "genlayerlabs/genlayer-project-boilerplate" },
+  { group: "with genlayer", hook: "every genlayer app starts", join: "with the", name: "boilerplate", url: "https://github.com/genlayerlabs/genlayer-project-boilerplate", repo: "genlayerlabs/genlayer-project-boilerplate" },
 ]
 
 const groups = ["made", "with genlayer"]
