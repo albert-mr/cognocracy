@@ -1,5 +1,8 @@
 import type { Metadata } from "next"
+import { Fragment } from "react"
 import Link from "next/link"
+import { LocalTime } from "@/components/local-time"
+import { Socials } from "@/components/socials"
 
 export const metadata: Metadata = {
   title: { absolute: "albert martínez — cognocracy" },
@@ -52,36 +55,37 @@ export default async function ProjectsPage() {
 
   return (
     <main className="min-h-dvh bg-background flex items-center justify-center p-4">
-      <div className="flex flex-col items-center gap-1.5 sm:gap-3 text-foreground w-full max-w-xl">
+      <div className="flex flex-col items-center gap-1.5 sm:gap-3 text-foreground">
         <Link href="/" className="text-lg sm:text-2xl font-bold hover:opacity-80 transition-opacity">albert martínez</Link>
-        <span className="text-base sm:text-lg font-medium opacity-40">/projects</span>
-        {groups.map((group) => (
-          <div key={group} className="mt-4 sm:mt-6 flex flex-col gap-2 self-stretch">
-            <span className="text-xs sm:text-sm opacity-40">{group}</span>
-            {projects.map((p, i) =>
-              p.group !== group ? null : (
-                <span key={p.name} className="flex gap-1.5 sm:gap-2 text-sm sm:text-lg">
-                  <span className="opacity-40 shrink-0">&gt;</span>
-                  <span>
-                    {p.hook} {p.join ?? "at"}&nbsp;
-                    <Link href={p.url} target="_blank" rel="noopener noreferrer" className="font-medium whitespace-nowrap hover:opacity-80 transition-opacity">
-                      {p.name}
-                    </Link>
-                    {starCounts[i] !== null && (
-                      <span className="opacity-40 ml-1.5 sm:ml-2 text-xs sm:text-sm whitespace-nowrap">{fmt(starCounts[i]!)}★</span>
-                    )}
+        <LocalTime />
+        <div className="mt-4 sm:mt-6 flex flex-col gap-2 self-stretch sm:self-auto">
+          {groups.map((group, gi) => (
+            <Fragment key={group}>
+              <span className={`text-xs sm:text-sm opacity-40 ${gi ? "mt-3 sm:mt-4" : ""}`}>{group}</span>
+              {projects.map((p, i) =>
+                p.group !== group ? null : (
+                  <span key={p.name} className="flex gap-1.5 sm:gap-2 text-sm sm:text-lg">
+                    <span className="opacity-40 shrink-0">&gt;</span>
+                    <span>
+                      {p.hook} {p.join ?? "at"}&nbsp;
+                      <Link href={p.url} target="_blank" rel="noopener noreferrer" className="font-medium whitespace-nowrap hover:opacity-80 transition-opacity">
+                        {p.name}
+                      </Link>
+                      {starCounts[i] !== null && (
+                        <span className="opacity-40 ml-1.5 sm:ml-2 text-xs sm:text-sm whitespace-nowrap">{fmt(starCounts[i]!)}★</span>
+                      )}
+                    </span>
                   </span>
-                </span>
-              ),
-            )}
-          </div>
-        ))}
-        <div className="mt-4 sm:mt-6 flex flex-col gap-2 self-stretch">
-          <span className="flex gap-1.5 sm:gap-2 text-sm sm:text-lg">
+                ),
+              )}
+            </Fragment>
+          ))}
+          <span className="mt-3 sm:mt-4 flex gap-1.5 sm:gap-2 text-sm sm:text-lg">
             <span className="opacity-40 shrink-0">&gt;</span>
             <span>back <Link href="/" className="font-medium hover:opacity-80 transition-opacity">/</Link></span>
           </span>
         </div>
+        <Socials />
       </div>
     </main>
   )
