@@ -2,6 +2,19 @@
 
 import { useEffect, useState } from "react"
 
+const ZONE = "Europe/Madrid"
+
+function zoneLabel(now: Date) {
+  const parts = new Intl.DateTimeFormat("en-GB", {
+    timeZone: ZONE,
+    timeZoneName: "short",
+  }).formatToParts(now)
+  const name = parts.find((p) => p.type === "timeZoneName")?.value ?? ""
+  if (/^(GMT|UTC)\+0?2$/.test(name)) return "CEST"
+  if (/^(GMT|UTC)\+0?1$/.test(name)) return "CET"
+  return name
+}
+
 export function LocalTime() {
   const [time, setTime] = useState("")
   const [zone, setZone] = useState("")
@@ -15,15 +28,10 @@ export function LocalTime() {
           minute: "2-digit",
           second: "2-digit",
           hour12: false,
-          timeZone: "Europe/Madrid",
+          timeZone: ZONE,
         })
       )
-      const parts = new Intl.DateTimeFormat("en-GB", {
-        timeZone: "Europe/Madrid",
-        timeZoneName: "short",
-      }).formatToParts(now)
-      const tz = parts.find((p) => p.type === "timeZoneName")?.value ?? ""
-      setZone(tz.replace("GMT+2", "CEST").replace("GMT+1", "CET"))
+      setZone(zoneLabel(now))
     }
     update()
     const id = setInterval(update, 1000)
@@ -32,5 +40,15 @@ export function LocalTime() {
 
   if (!time) return null
 
-  return <span className="text-base sm:text-lg font-medium">{time} {zone}</span>
+  return (
+    <span className="flex items-baseline gap-[0.3em] text-base sm:text-lg font-medium tabular-nums">
+      <span>{time}</span>
+      <span className="inline-grid">
+        <span aria-hidden className="invisible col-start-1 row-start-1">
+          CEST
+        </span>
+        <span className="col-start-1 row-start-1">{zone}</span>
+      </span>
+    </span>
+  )
 }
