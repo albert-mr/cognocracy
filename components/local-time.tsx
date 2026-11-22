@@ -43,12 +43,7 @@ export function LocalTime() {
   return (
     <span className="flex items-baseline gap-[0.3em] text-base sm:text-lg font-medium tabular-nums">
       <span>{time}</span>
-      <span className="inline-grid">
-        <span aria-hidden className="invisible col-start-1 row-start-1">
-          CEST
-        </span>
-        <span className="col-start-1 row-start-1">{zone}</span>
-      </span>
+      <span>{zone}</span>
     </span>
   )
 }
