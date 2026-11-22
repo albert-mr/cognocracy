@@ -80,10 +80,13 @@ export default async function ProjectsPage() {
               )}
             </Fragment>
           ))}
-          <span className="mt-3 sm:mt-4 flex gap-1.5 sm:gap-2 text-sm sm:text-lg">
-            <span className="opacity-40 shrink-0">&gt;</span>
-            <span>back <Link href="/" className="font-medium hover:opacity-80 transition-opacity">/</Link></span>
-          </span>
+          <Link
+            href="/"
+            className="mt-3 flex min-h-11 w-fit items-center gap-1.5 rounded-sm pr-3 text-sm font-medium hover:opacity-80 focus-visible:outline-2 focus-visible:outline-offset-2 transition-opacity sm:mt-4 sm:gap-2 sm:text-lg"
+          >
+            <span aria-hidden="true" className="opacity-40">←</span>
+            <span className="underline underline-offset-4">back home</span>
+          </Link>
         </div>
         <Socials />
       </div>
